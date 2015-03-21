@@ -6,14 +6,15 @@ for record in SeqIO.parse(handle, "fasta") :
 	stringseq= ''.join(record.seq)
 	#matchObj = re.search( r'ATG', stringseq)
 	#matchObj = re.search( r'[GC]TACA[CG]TA', stringseq)
-	matchObj = re.search( r'G[CGA]CAGCCA', stringseq)
+	#matchObj = re.findall( r'G[CGA]CAGCCA', stringseq)
 	#matchObj = re.search( r'G[AG]CGGGA', stringseq)
 	#matchObj = re.search( r'GC[AG]CTAAC', stringseq)
+	pattern=r'G[CGA]CAGCCA'
+	regex = re.compile(pattern, re.IGNORECASE)
+	for match in regex.finditer(stringseq):
+		print "%s: %s" % (match.start(), match.group())
 
-	if matchObj:
-   			print " Match", record.id ,matchObj.group()
-	else:
-  	 print "No match!!"
+	
 
 
 handle.close()
