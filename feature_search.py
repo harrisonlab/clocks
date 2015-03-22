@@ -22,16 +22,17 @@
 
 import gffutils
 
-scaf='7.23'
 
-#need to get end first
+#all of these coming from prior script output
+scaf='7.23'
 motif="TEST"
 m_start=7892
 m_end=7899
-a_fwd=1000
 m_dir=-1
+#arbitrary upstream distance
+a_fwd=1000
 
-
+#load the database
 db = gffutils.FeatureDB('nc', keep_order=True)
 record={}
 
@@ -61,8 +62,7 @@ else:
 		print "Motif start",m_start
 		upstream=record.start-m_start
 		print 'Motif upstream', upstream, "bp"
-		print record['ID'],record.start,record.end,record.strand
-		
+		print record['ID'],record.start,record.end,record.strand	
 	elif record.strand == '-' and m_dir == -1:
 		print "Motif",motif
 		print "Motif start",m_start
