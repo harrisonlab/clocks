@@ -1,6 +1,6 @@
 import gffutils
 
-f = open("nc_motifs.txt",'r')
+f = open("vd_motifs.txt",'r')
 for line in f.readlines():
 	values=line.split('\t')
 	scaf=values[0]
@@ -12,7 +12,7 @@ for line in f.readlines():
 	#print scaf,m_start,m_end,motif,m_dir
 	a_fwd=1000
 	#load the database
-	db = gffutils.FeatureDB('nc', keep_order=True)
+	db = gffutils.FeatureDB('vd', keep_order=True)
 	record={}
 	subregion={}
 	
