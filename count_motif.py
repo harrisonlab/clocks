@@ -1,6 +1,6 @@
 import re
 from Bio import SeqIO
-handle = open("nc.fasta", "rU")
+handle = open("vd.fasta", "rU")
 for record in SeqIO.parse(handle, "fasta") :
 	#print record.id,len(record.seq)
 	stringseq= ''.join(record.seq)
