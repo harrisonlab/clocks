@@ -18,3 +18,5 @@ for rec in GFF.parse(in_handle, limit_info=limit_info):
 in_handle.close()
 
  
+#to do- work out how to efficiently query gff for each motif location and ask whether it 
+#upstream of a coding sequence- making sure that the orientation is correct 
