@@ -45,13 +45,13 @@ for line in f.readlines():
 			if upstream<0:
 				next
 			else:
-				print motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
+				print record.id,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
 		elif record.strand == '-' and m_dir == '-':
 			upstream=(record.end-m_end)*-1
 			if upstream<0:
 				next
 			else:
-				print motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
+				print record.id,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
 		else:
 			#print "Strands incorrect"
 			next
