@@ -40,11 +40,11 @@ Develop script to parse gff for motifs in above list in putative promoters- draw
 
 run (one time only)
 
-gff_test.py (again hard coded paths) to create SQLITE databases of gff files
+`gff_test.py (again hard coded paths) to create SQLITE databases of gff files`
 
-run
+run (remember the hard coding)
 
-feature_search.py 
+`feature_search.py?vd_hits.txt` 
 
 This will return a list of promoter motifs that have a gene upto 1k downstream of the promoter
  
