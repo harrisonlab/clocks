@@ -44,7 +44,7 @@ run (one time only)
 
 run (remember the hard coding)
 
-`feature_search.py?vd_hits.txt` 
+`feature_search.py>vd_hits.txt` 
 
 This will return a list of promoter motifs that have a gene upto 1k downstream of the promoter
  
