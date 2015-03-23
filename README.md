@@ -44,3 +44,9 @@ run (remember the hard coding)
 
 This will return a list of promoter motifs that have a gene upto 1k downstream of the promoter
  
+ln -s /home/groups/harrisonlab/project_files/neonectria_galligena/analysis/blast_homology/PHIbase/PHI_36_accessions.fa phibase.fa
+
+makeblastdb -in vd.fasta -dbtype 'nucl' -title vd -out vd
+makeblastdb -in nc.fasta -dbtype 'nucl' -title nc -out nc
+makeblastdb -in phibase.fa -dbtype 'prot' -title phibase -out phibase
+
