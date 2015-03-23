@@ -29,6 +29,7 @@ ln -s /home/groups/harrisonlab/ref_genomes/fungi/n_crassa/Neurospora_crassa.ASM1
 Note- fasta is hard-coded as I am in a hurry...
 
 `python count_motif.py >nc_motifs.txt
+
  python count_motif.py >vd_motifs.txt
 `
 
