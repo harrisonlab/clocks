@@ -1,6 +1,6 @@
 import gffutils
 
-f = open("vd_motifs.txt",'r')
+f = open("nc_motifs.txt",'r')
 for line in f.readlines():
 	values=line.split('\t')
 	scaf=values[0]
@@ -12,20 +12,20 @@ for line in f.readlines():
 	#print scaf,m_start,m_end,motif,m_dir
 	a_fwd=1000
 	#load the database
-	db = gffutils.FeatureDB('vd', keep_order=True)
+	db = gffutils.FeatureDB('nc', keep_order=True)
 	record={}
 	subregion={}
 	
 	if m_dir == '+':
 		#print "Here +"
-		subregion=  list(db.region(region=(scaf, m_start,m_end+a_fwd),featuretype='CDS',completely_within=False)) 		
+		subregion=  list(db.region(region=(scaf, m_start,m_end+a_fwd),featuretype='gene',completely_within=False)) 		
 		if len(subregion)>0:
 			record=subregion[0]
 		else:
 			record=0
 	elif m_dir == '-':
 		#print "Here -"
-		subregion=  list(db.region(region=(scaf, m_end-a_fwd,m_end),featuretype='CDS',completely_within=False))
+		subregion=  list(db.region(region=(scaf, m_end-a_fwd,m_end),featuretype='gene',completely_within=False))
 		if len(subregion)>0:
 			sub_val=len(subregion)-1
 			record=subregion[sub_val]
@@ -45,13 +45,13 @@ for line in f.readlines():
 			if upstream<0:
 				next
 			else:
-				print record.id,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
+				print record.seqid,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
 		elif record.strand == '-' and m_dir == '-':
 			upstream=(record.end-m_end)*-1
 			if upstream<0:
 				next
 			else:
-				print record.id,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
+				print record.seqid,motif,m_start,upstream,record['ID'],record.start,record.end,record.strand
 		else:
 			#print "Strands incorrect"
 			next
