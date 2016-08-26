@@ -1,0 +1,20 @@
+##gff-version 3
+##sequence-region   7.233 1 629
+7.233	RepeatMasker	repeat_region	164	222	.	-	.	Name=TAD1_NC;class=LINE/Tad1;repeat_consensus=N;type=Type I Transposons/LINE
+7.233	RepeatMasker	repeat_region	207	256	.	-	.	Name=TAD1_NC;class=LINE/Tad1;repeat_consensus=N;type=Type I Transposons/LINE
+7.233	.	repeat_region	481	541	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+##sequence-region   7.247 1 651
+7.247	trF	repeat_region	182	216	.	.	.	Name=trf;class=trf;repeat_consensus=ATATATTTAAATAGT;type=Tandem repeats
+7.247	.	repeat_region	521	651	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+7.247	trF	repeat_region	530	651	.	.	.	Name=trf;class=trf;repeat_consensus=TTAGGG;type=Tandem repeats
+##sequence-region   7.153 1 737
+7.153	.	repeat_region	65	72	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+7.153	.	repeat_region	189	278	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+7.153	.	repeat_region	314	375	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+##sequence-region   7.178 1 749
+7.178	trF	repeat_region	243	269	.	.	.	Name=trf;class=trf;repeat_consensus=ATTAAATAT;type=Tandem repeats
+##sequence-region   7.160 1 792
+7.160	.	repeat_region	252	260	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
+##sequence-region   7.187 1 908
+##sequence-region   7.186 1 960
+7.186	.	repeat_region	841	877	.	.	.	Name=dust;class=dust;repeat_consensus=N;type=Dust
